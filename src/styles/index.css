@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --background-color: #F5F5F1;
-  --hover-color: #E6E2D3;
-  --text-color: #1A1A1A;
-  --secondary-text-color: #8C8C8C;
+  --color-background: #F5F5F1;
+  --color-hover: #E6E2D3;
+  --color-text: #1A1A1A;
+  --color-secondary-text: #8C8C8C;
 }
 
 /* --------- CSS reset -----------*/
@@ -63,3 +63,9 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 /* ------------------------ */
+
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
