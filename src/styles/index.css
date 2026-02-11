@@ -5,6 +5,8 @@
   --color-hover: #E6E2D3;
   --color-text: #1A1A1A;
   --color-secondary-text: #8C8C8C;
+
+  --font-inter : 'inter', Arial;
 }
 
 /* --------- CSS reset -----------*/
@@ -68,4 +70,5 @@ h1, h2, h3, h4, h5, h6 {
 body {
   background-color: var(--color-background);
   color: var(--color-text);
+  font-family: var(--font-inter);
 }
