@@ -12,13 +12,13 @@ export default function Navbar() {
 
             {/* left part: navigation */}
             <div className="flex items-baseline gap-1 leading-4.5">
-                <h1 className="font-bold text-lg">Yvan Dumas</h1>
+                <h1 className="font-bold text-base">Yvan Dumas</h1>
                 <span>/ Portfolio</span>
 
                 <ul className="flex flex-col">
                     {navLinks.map((link) => (
                         <li key={link.name}>
-                            <a href={link.href} className="font-extralight hover:underline">
+                            <a href={link.href} className="font-extralight hover:underline text-sm">
                                 / {link.name}
                             </a>
                         </li>
@@ -28,7 +28,7 @@ export default function Navbar() {
             </div>
 
             {/* right part: language btn */}
-            <button className="border-2 rounded-full px-4 text-base">
+            <button className="border-2 rounded-full px-2 text-base">
                 Language
             </button>
         </nav>
