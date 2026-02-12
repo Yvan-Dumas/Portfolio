@@ -20,7 +20,7 @@ export default function Navbar() {
                 <ul className="flex flex-col">
                     {navLinks.map((link) => (
                         <li key={link.name}>
-                            <a href={link.href} className="font-extralight hover:underline text-sm">
+                            <a href={link.href} className="font-extralight hover:underline transition-all text-sm">
                                 / {link.name}
                             </a>
                         </li>
