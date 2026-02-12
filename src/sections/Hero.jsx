@@ -1,3 +1,5 @@
+import Button from "../components/Button";
+
 export default function Hero() {
   return (
     <section className="flex flex-col items-center justify-center text-center px-4 pt-5 min-h-100">
@@ -12,7 +14,7 @@ export default function Hero() {
 
       <p className="text-sm md:text-lg pt-5 pb-2 leading-tight">Looking for a 5-month internship abroad, starting in September 2026.</p>
 
-      <button className="border-2 border-text rounded-full px-6 py-2 font-bold">Contact me !</button>
+      <Button content={"Contact me !"} />
     </section>
   );
 }

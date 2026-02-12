@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 export default function Navbar() {
     const navLinks = [
         { name: 'Home', href: '#home' },
@@ -28,9 +30,7 @@ export default function Navbar() {
             </div>
 
             {/* right part: language btn */}
-            <button className="border-2 rounded-full px-2 text-base">
-                Language
-            </button>
+            <Button content={"> Language"}/>
         </nav>
     );
 }
