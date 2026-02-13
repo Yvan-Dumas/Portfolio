@@ -28,12 +28,12 @@ export default function ScrollDots() {
     }, []);
 
     const handleClick = (id) => {
-        gsap.to(window, { duration: 1, scrollTo: `#${id}`, ease: "power3.inOut" });
+        gsap.to(window, { duration: 1, scrollTo: { y: `#${id}`, offsetY: 100 }, ease: "power3.inOut" });
     };
 
     return (
         <nav className="hidden fixed right-8 top-1/2 -translate-y-1/2 z-50 md:flex flex-col gap-5">
-            {["home", "about", "skills", "projects", "education"].map((id) => (
+            {["home", "about", "skills", "projects", "journey"].map((id) => (
                 <button
                     key={id}
                     target={id}

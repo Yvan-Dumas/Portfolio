@@ -17,6 +17,11 @@
   --font-inter : 'Inter', 'Roboto', system-ui;
 }
 
+* {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 html, body {
   background-color: var(--color-background);
   color: var(--color-text);
@@ -24,5 +29,4 @@ html, body {
   
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
 }

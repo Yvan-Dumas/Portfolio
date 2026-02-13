@@ -1,26 +1,36 @@
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Button from "./Button";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 export default function Navbar() {
     const navLinks = [
-        { name: 'Home', href: '#home' },
-        { name: 'About', href: "#about" },
-        { name: 'Skills', href: "#skills" },
-        { name: 'Projects', href: '#projects' },
-        { name: 'Experience & Education', href: '#experience' }
+        { name: 'Home', href: 'home' },
+        { name: 'About', href: "about" },
+        { name: 'Skills', href: "skills" },
+        { name: 'Projects', href: 'projects' },
+        { name: 'Journey', href: 'journey' }
     ];
 
+    const handleClick = (e, id) => {
+        e.preventDefault();
+        gsap.to(window, { duration: 1, scrollTo: { y: `#${id}`, offsetY: 100 }, ease: "power3.inOut" });
+    };
+
+
     return (
-        <nav className="sticky top-0 z-50 w-full flex justify-between items-start px-8 py-6">
+        <nav className="md:fixed top-0 z-50 w-full flex justify-between items-start max-w-full mx-auto px-6 py-6 pointer-events-none">
 
             {/* left part: navigation */}
-            <div className="flex items-baseline gap-1 leading-4.5">
-                <h1 className="font-bold text-base">Yvan Dumas</h1>
-                <span>/ Portfolio</span>
+            <div className="flex flex-col items-start leading-tight pointer-events-auto">
+                <h1 className="font-bold text-base tracking-tight">Yvan Dumas</h1>
+                <span className="text-sm ml-4">/ Portfolio</span>
 
-                <ul className="flex flex-col">
+                <ul className="flex flex-col ml-8">
                     {navLinks.map((link) => (
                         <li key={link.name}>
-                            <a href={link.href} className="font-extralight hover:underline transition-all text-sm">
+                            <a onClick={ (e) => handleClick(e, link.href) } href={`#${link.href}`} className="font-extralight hover:underline transition-all text-sm">
                                 / {link.name}
                             </a>
                         </li>
@@ -30,7 +40,7 @@ export default function Navbar() {
             </div>
 
             {/* right part: language btn */}
-            <Button content={"> Language"}/>
+            <Button content={"> Language"} />
         </nav>
     );
 }
