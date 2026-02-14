@@ -37,7 +37,7 @@ export default function App() {
 		}} ref={lenisRef}>
 			<Navbar />
 			<ScrollDots />
-			<main className='selection:bg-hover px-35'>
+			<main className='selection:bg-hover md:px-35'>
 				<Hero />
 				<About />
 				<Skills />

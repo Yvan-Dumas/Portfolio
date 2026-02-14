@@ -15,6 +15,8 @@
   --color-secondary-text: #8C8C8C;
 
   --font-inter : 'Inter', 'Roboto', system-ui;
+
+  --text-section-heading : clamp(2rem,3vw,3rem);
 }
 
 * {
