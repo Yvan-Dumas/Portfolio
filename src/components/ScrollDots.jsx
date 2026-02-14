@@ -32,7 +32,7 @@ export default function ScrollDots() {
     };
 
     return (
-        <nav className="hidden fixed right-8 top-1/2 -translate-y-1/2 z-50 md:flex flex-col gap-5">
+        <nav className="hidden fixed right-8 top-1/2 -translate-y-1/2 z-50 md:flex flex-col gap-5 selection:bg-hover">
             {["home", "about", "skills", "projects", "journey"].map((id) => (
                 <button
                     key={id}

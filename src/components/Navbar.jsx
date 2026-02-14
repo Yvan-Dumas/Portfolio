@@ -20,7 +20,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className="md:fixed top-0 z-50 w-full flex justify-between items-start max-w-full mx-auto px-6 py-6 pointer-events-none">
+        <nav className="md:fixed top-0 z-50 w-full flex justify-between items-start max-w-full mx-auto px-6 py-6 pointer-events-none selection:bg-hover">
 
             {/* left part: navigation */}
             <div className="flex flex-col items-start leading-tight pointer-events-auto">
@@ -40,7 +40,9 @@ export default function Navbar() {
             </div>
 
             {/* right part: language btn */}
-            <Button content={"> Language"} />
+            <div className="pointer-events-auto">
+                <Button content={"> Language"}/>
+            </div>
         </nav>
     );
 }
