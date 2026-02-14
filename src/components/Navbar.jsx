@@ -15,7 +15,7 @@ export default function Navbar() {
 
     const handleClick = (e, id) => {
         e.preventDefault();
-        gsap.to(window, { duration: 1, scrollTo: { y: `#${id}`, offsetY: 100 }, ease: "power3.inOut" });
+        gsap.to(window, { duration: 1, scrollTo: { y: `#${id}`, offsetY: 0 }, ease: "power3.inOut" });
     };
 
 
