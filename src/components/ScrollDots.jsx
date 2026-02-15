@@ -1,12 +1,12 @@
-import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function ScrollDots() {
-    useEffect(() => {
+    useGSAP(() => {
         const dots = document.querySelectorAll(".dot-trigger");
 
         dots.forEach((dot) => {
