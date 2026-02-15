@@ -1,6 +1,7 @@
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 import SkillCard from "../components/SkillCard";
 
@@ -16,9 +17,9 @@ import cImg from "../assets/images/skills/c++.svg";
 import figmaImg from "../assets/images/skills/figma.svg";
 import djangoImg from "../assets/images/skills/django.png";
 import gitImg from "../assets/images/skills/git.svg";
-import { useGSAP } from "@gsap/react";
 
 
+// Data for the 1st row of the infinite marquee
 const row1 = [
     { name: "HTML", icon: htmlImg },
     { name: "CSS", icon: cssImg },
@@ -28,6 +29,7 @@ const row1 = [
     { name: "Figma", icon: figmaImg },
 ];
 
+// Data for the 2nd row of the infinite marquee
 const row2 = [
     { name: "Java", icon: javaImg },
     { name: "Python", icon: pythonImg },
@@ -40,20 +42,26 @@ const row2 = [
 
 export default function Skills() {
     const { t } = useTranslation();
+
     const row1Ref = useRef(null);
     const row2Ref = useRef(null);
     const container = useRef(null);
+    const anim1 = useRef(null);
+    const anim2 = useRef(null);
 
+    // Animations for the infinite marquee
     useGSAP(() => {
-        gsap.to(row1Ref.current, {
-            xPercent: -33.33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333,
+        // First row scroll
+        anim1.current = gsap.to(row1Ref.current, {
+            xPercent: -33.3,
             ease: "none",
             duration: 15,
             repeat: -1,
         });
 
-        gsap.set(row2Ref.current, { xPercent: -33.3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 });
-        gsap.to(row2Ref.current, {
+        // Second row scroll
+        gsap.set(row2Ref.current, { xPercent: -33.3 });
+        anim2.current = gsap.to(row2Ref.current, {
             xPercent: 0,
             ease: "none",
             duration: 17,
@@ -61,10 +69,21 @@ export default function Skills() {
         });
     }, { scope: container });
 
+    // Pause the scroll animation
+    const handleMouseEnter = (anim) => {
+        gsap.to(anim.current, { timeScale: 0, duration: 1 });
+    };
+
+    // Resume the scroll animation
+    const handleMouseLeave = (anim) => {
+        gsap.to(anim.current, { timeScale: 1, duration: 1 });
+    };
+
     return (
         <section id="skills" className="min-h-screen">
             <h2 className="text-section-heading font-bold max-w-full mx-auto px-8 tracking-tight md:pt-15">{t('skills.title')}</h2>
 
+            {/* Infinite marquee */}
             <div ref={container} className="
                 flex flex-col gap-10 
                 w-full  overflow-hidden
@@ -73,14 +92,22 @@ export default function Skills() {
                 mt-16 py-1
             ">
                 {/* First row */}
-                <div id="row1" ref={row1Ref} className="flex gap-2 md:gap-3 w-max">
+                <div id="row1" ref={row1Ref} 
+                className="flex gap-2 md:gap-3 w-max"
+                onMouseEnter={() => handleMouseEnter(anim1)}
+                onMouseLeave={() => handleMouseLeave(anim1)}
+                >
                     {[...row1, ...row1, ...row1].map((skill, id) => (
                         <SkillCard skill={skill} key={`r1-${id}`} />
                     ))}
                 </div>
 
                 {/* Second row */}
-                <div id="row2" ref={row2Ref} className="flex gap-2 md:gap-3 w-max">
+                <div id="row2" ref={row2Ref} 
+                className="flex gap-2 md:gap-3 w-max"
+                onMouseEnter={() => handleMouseEnter(anim2)}
+                onMouseLeave={() => handleMouseLeave(anim2)}
+                >
                     {[...row2, ...row2, ...row2].map((skill, id) => (
                         <SkillCard skill={skill} key={`r2-${id}`} />
                     ))}
