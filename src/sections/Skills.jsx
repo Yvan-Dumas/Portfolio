@@ -39,6 +39,7 @@ const row2 = [
     { name: "git", icon: gitImg },
 ];
 
+gsap.registerPlugin(useGSAP);
 
 export default function Skills() {
     const { t } = useTranslation();
