@@ -1,6 +1,7 @@
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import { ReactLenis } from 'lenis/react';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Navbar from './components/Navbar';
@@ -12,11 +13,12 @@ import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Education from './sections/Journey';
 
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function App() {
 	const lenisRef = useRef();
 
-	useEffect(() => {
+	useGSAP(() => {
 		ScrollTrigger.normalizeScroll(true);
 
 		function update(time) {
@@ -24,7 +26,7 @@ export default function App() {
 		}
 		gsap.ticker.add(update)
 		return () => gsap.ticker.remove(update)
-	}, [])
+	}, []);
 
 	return (
 		<ReactLenis root options={{
