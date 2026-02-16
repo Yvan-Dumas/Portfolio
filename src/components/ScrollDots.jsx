@@ -1,32 +1,35 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollDots() {
+
     useGSAP(() => {
         const dots = document.querySelectorAll(".dot-trigger");
 
         dots.forEach((dot) => {
             const sectionId = dot.getAttribute("target");
 
+            // Trigger to change the color of the dot
             ScrollTrigger.create({
                 trigger: `#${sectionId}`,
                 start: "top center",
                 end: "bottom center",
+                scrub : true,
                 onToggle: (self) => {
                     if (self.isActive) {
-                        gsap.to(dot, { backgroundColor: "#1A1A1A", scale: 1, duration: 0.3 });
+                        gsap.to(dot, { backgroundColor: "#1A1A1A", scale: 1, duration: 0.2 });
                     } else {
-                        gsap.to(dot, { backgroundColor: "transparent", scale: 1, duration: 0.3 });
+                        gsap.to(dot, { backgroundColor: "transparent", scale: 1, duration: 0.2 });
                     }
                 },
             });
         });
     }, []);
 
+    // When clicking on a dot
     const handleClick = (id) => {
         gsap.to(window, { duration: 1, scrollTo: { y: `#${id}`, offsetY: 0 }, ease: "power3.inOut" });
     };
