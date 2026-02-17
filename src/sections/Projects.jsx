@@ -27,7 +27,7 @@ export default function Projects() {
     const { t } = useTranslation();
 
     return (
-        <section id="projects" className="min-h-screen w-full">
+        <section id="projects" className="mt-50 md:mt-0 md:min-h-screen w-full">
             <h2 className="text-section-heading font-bold max-w-full mx-auto px-8 tracking-tight md:pt-15 mb-5 md:mb-10">{t('projects.title')}</h2>
 
             {/* bento grid */}

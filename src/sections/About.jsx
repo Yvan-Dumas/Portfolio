@@ -6,7 +6,7 @@ export default function About() {
     const { t } = useTranslation();
 
     return (
-        <section id="about" className="min-h-screen py-20 md:py-0">
+        <section id="about" className="mt-20 md:mt-0 md:min-h-screen py-20 md:py-0">
             <h2 className="text-section-heading font-bold max-w-full mx-auto px-8 tracking-tight md:pt-15">{t('about.title')}</h2>
             <div className="flex flex-col items-center center md:flex-row px-10 md:pl-20 gap-10 md:gap-20">
                 <p className="mt-10 md:mt-15 whitespace-pre-line">
