@@ -4,7 +4,7 @@ export default function BentoItem({title, image, className, link}) {
         <div className={`
         overflow-hidden 
         rounded-lg md:rounded-2xl
-        hover:scale-[1.02] transition-all duration-500
+        hover:scale-[1.02] transition-all duration-500 active:scale-95 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] 
         h-full w-auto
         ${className}
         `}>
