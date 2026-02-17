@@ -12,6 +12,7 @@ import About from './sections/About';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Education from './sections/Journey';
+import Contact from './sections/Contact';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -45,6 +46,7 @@ export default function App() {
 				<Skills />
 				<Projects />
 				<Education />
+				<Contact />
 			</main>
 		</ReactLenis>
 	);

@@ -49,5 +49,8 @@
             "date" : "2020 - 2023",
             "description" : "French baccalaureate in Mathematics and Engineering Science, with honors"
         }
+    },
+    "contact" : {
+        "title" : "Contact me !"
     }
 }
