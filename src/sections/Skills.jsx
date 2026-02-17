@@ -90,7 +90,7 @@ export default function Skills() {
                 w-full  overflow-hidden
                 mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] 
                 [-webkit-mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]
-                mt-16 py-1
+                mt-16 py-10
             ">
                 {/* First row */}
                 <div id="row1" ref={row1Ref} 
