@@ -16,5 +16,38 @@
     },
     "projects" : {
         "title" : "Projects"
+    },
+    "journey" : {
+        "title" : "Education & Experience",
+        "carrefour" : {
+            "title" : "Carrefour - Commercial Employee",
+            "date" : "July 2025 - August 2025",
+            "description" : "Managed stock reception and FIFO rotation for fresh/frozen goods.\nMonitored expiration dates and ensured strict compliance with safety, and cold chain regulations."
+        },
+        "polytech" : {
+            "title" : "Polytech Lyon - Engineering School",
+            "date" : "2025 - 2028",
+            "description" : "Engineer's degree in Computer Science"
+        },
+        "cntb" : {
+            "title" : "Centre Nautique Tony Bertrand - Facility and Maintenance Assistant",
+            "date" : "June 2024 - September 2024",
+            "description" : "Maintained facility hygiene and cleanliness for user satisfaction.\nProvided customer service and guidance to visitors in a high-traffic public facility."
+        },
+        "peip" : {
+            "title" : "Polytech Lyon - Integrated Preparatory Cycle",
+            "date" : "2023 - 2025",
+            "description" : "Polytech Engineering Schools Program (PeiP), Mathematics and Computer Science"
+        },
+        "iris" : {
+            "title" : "Iris Clinic - IT and Healthcare Observation Intern",
+            "date" : "December 2019",
+            "description" : "Observed Electronic Health Records (EHR) management in a hospital.\nAssisted the IT Manager to understand data security challenges and infrastructure in the healthcare sector."
+        },
+        "lycee" :  {
+            "title" : "Lycée Charlie Chaplin (High School)",
+            "date" : "2020 - 2023",
+            "description" : "French baccalaureate in Mathematics and Engineering Science, with honors"
+        }
     }
 }
