@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import Button from "./Button";
+import ScrollButton from "./ScrollButton";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -37,12 +37,11 @@ export default function Navbar() {
                         </li>
                     ))}
                 </ul>
-
             </div>
 
             {/* right part: language btn */}
             <div className="pointer-events-auto">
-                <Button content={"> Language"}/>
+                <ScrollButton content={"> Language"}/>
             </div>
         </nav>
     );
