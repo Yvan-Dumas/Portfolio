@@ -6,7 +6,7 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section id="home" className="flex flex-col items-center justify-center text-center px-4 pt-5 md:min-h-screen pb-50 md:pb-0">
+    <section id="home" className="flex flex-col items-center justify-center text-center px-4 md:min-h-screen pb-50 md:pb-0 pt-50 md:pt-0">
       <div className="flex items-center text-[clamp(2.5rem,7vw,3rem)] font-bold mb-2 leading-5">
         <span>{t('hero.greetings')}</span>
         <span className="animate-wave origin-bottom-right relative -top-0.5">👋</span>
