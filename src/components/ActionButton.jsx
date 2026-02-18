@@ -1,4 +1,4 @@
-export default function ActionButton({ content, href, download }) {
+export default function ActionButton({ content, href, download, handleClick }) {
     const className = "btn-style";
 
     if (href) {
@@ -10,7 +10,11 @@ export default function ActionButton({ content, href, download }) {
     }
 
     return (
-        <button className={className}>
+        <button
+            type="button"
+            className={className}
+            onClick={handleClick}
+        >
             {content}
         </button>
     );
