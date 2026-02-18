@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 
@@ -17,7 +18,6 @@ import cImg from "../assets/images/skills/c++.svg";
 import figmaImg from "../assets/images/skills/figma.svg";
 import djangoImg from "../assets/images/skills/django.png";
 import gitImg from "../assets/images/skills/git.svg";
-
 
 // Data for the 1st row of the infinite marquee
 const row1 = [
@@ -39,7 +39,7 @@ const row2 = [
     { name: "git", icon: gitImg },
 ];
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Skills() {
     const { t } = useTranslation();
@@ -50,43 +50,58 @@ export default function Skills() {
     const anim1 = useRef(null);
     const anim2 = useRef(null);
 
-    // Animations for the infinite marquee
+    // Animations
     useGSAP(() => {
-        // First row scroll
+        // First row infinite scroll
         anim1.current = gsap.to(row1Ref.current, {
             xPercent: -33.333,
             ease: "none",
             duration: 15,
             repeat: -1,
+            force3D: true,
         });
 
-        // Second row scroll
+        // Second row infinite scroll
         gsap.set(row2Ref.current, { xPercent: -33.333 });
         anim2.current = gsap.to(row2Ref.current, {
             xPercent: 0,
             ease: "none",
             duration: 17,
             repeat: -1,
+            force3D: true,
+        });
+
+        gsap.from("h2", {
+            x: -50,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: container.current,
+                start: "top 80%",
+            }
         });
     }, { scope: container });
 
+
+
     // Pause the scroll animation
     const handleMouseEnter = (anim) => {
-        gsap.to(anim.current, { timeScale: 0, duration: 1 });
+        gsap.to(anim.current, { timeScale: 0, duration: 0.5 });
     };
 
     // Resume the scroll animation
     const handleMouseLeave = (anim) => {
-        gsap.to(anim.current, { timeScale: 1, duration: 1 });
+        gsap.to(anim.current, { timeScale: 1, duration: 0.5 });
     };
 
     return (
-        <section id="skills" className="pb-50 md:pb-0 md:min-h-screen">
+        <section ref={container} id="skills" className="pb-50 md:pb-0 md:min-h-screen">
             <h2 className="text-section-heading font-bold max-w-full mx-auto px-8 tracking-tight md:pt-15">{t('skills.title')}</h2>
 
             <div className="flex justify-center items-center">
             {/* Infinite marquee */}
-            <div ref={container} className="
+            <div className="
                 flex-1 flex flex-col gap-10 
                 w-full  overflow-hidden
                 mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] 
