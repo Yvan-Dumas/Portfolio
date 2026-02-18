@@ -1,5 +1,7 @@
 import { useTranslation, Trans } from "react-i18next";
 
+import ActionButton from "../components/ActionButton";
+
 import chopperImg from "../assets/images/Chopper.png";
 
 export default function About() {
@@ -9,12 +11,19 @@ export default function About() {
         <section id="about" className="pt-50 md:pt-0 md:min-h-screen">
             <h2 className="text-section-heading font-bold max-w-full mx-auto px-8 tracking-tight md:pt-15">{t('about.title')}</h2>
             <div className="flex flex-col items-center center md:flex-row px-10 md:pl-20 gap-10 md:gap-20">
-                <p className="mt-10 md:mt-15 whitespace-pre-line">
-                    <Trans
-                        i18nKey="about.description"
-                        components={{ b: <strong className="font-bold" /> }}
+                <div className="flex flex-col gap-5 items-start">
+                    <p className="mt-10 md:mt-15 whitespace-pre-line">
+                        <Trans
+                            i18nKey="about.description"
+                            components={{ b: <strong className="font-bold" /> }}
+                        />
+                    </p>
+                    {/* Resume */}
+                    <ActionButton
+                        content={t('contact.resume')}
+                        href={"/DumasYvan-resume.pdf"}
                     />
-                </p>
+                </div>
                 <img src={chopperImg} alt="3D modeling of Tony Tony Chopper from One Piece" className="flex-none w-[18vw] min-w-37.5 max-w-125 object-contain aspect-auto drop-shadow-2xl animate-float" />
             </div>
         </section>
