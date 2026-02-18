@@ -11,7 +11,7 @@ export default function Button({ content, href }) {
     };
     
     return (
-        <a onClick={() => handleClick()} className="btn-style">
+        <a onClick={() => handleClick()} className="btn-style md:py-2 md:px-6">
             {content}
         </a>
     );
