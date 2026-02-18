@@ -19,7 +19,7 @@ const projects = [
     {title : "Movizitor", image : movizitorImg, size : large, link : "https://github.com/Yvan-Dumas/movizitor/"},
     {title : "Jetpack Escape", image : jetpackEscapeImg, size : large, link : "https://github.com/Yvan-Dumas/Jetpack-Escape"},
     {title : "Calculator", image : calculatorImg, size : square, link : "https://github.com/Yvan-Dumas/Odin-Calculator"},
-    {title : "Gameboy", image : gameboyImg, size : square, link : "a"},
+    {title : "Gameboy", image : gameboyImg, size : square, link : "https://www.instagram.com/venty_3d/"},
     {title : "Blog", image : blogImg, size : large, link : "https://github.com/Yvan-Dumas/Blog-projet-isi1"},
 ]
 
@@ -27,7 +27,7 @@ export default function Projects() {
     const { t } = useTranslation();
 
     return (
-        <section id="projects" className="mt-50 md:mt-0 md:min-h-screen w-full">
+        <section id="projects" className="pt-50 md:pt-0 md:min-h-screen">
             <h2 className="text-section-heading font-bold max-w-full mx-auto px-8 tracking-tight md:pt-15 mb-5 md:mb-10">{t('projects.title')}</h2>
 
             {/* bento grid */}

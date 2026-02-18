@@ -20,7 +20,7 @@ export default function Education() {
     ];
 
     return (
-        <section id="journey" className="mt-50 md:min-h-screen w-full">
+        <section id="journey" className="pt-50 md:pt-50 md:min-h-screen">
             <h2 className="text-section-heading font-bold max-w-full px-8 tracking-tight md:pt-15 mb-5 md:mb-10">{t('journey.title')}</h2>
 
             <div className="relative md:mx-20">
@@ -28,7 +28,7 @@ export default function Education() {
                 <div className="absolute mx-5 md:mx-0 md:left-1/2 h-full w-0.5 rounded-full bg-text"/>
 
                 {/* Education and Experience */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 md:gap-x-25 items-center gap-y-10 md:gap-y-20 mx-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 md:gap-x-25 items-center gap-y-10 md:gap-y-20 lg:gap-y-50 mx-12">
                     {journeyData.map((item, index) => (
                         <JourneyCard
                             key={index}

@@ -54,14 +54,14 @@ export default function Skills() {
     useGSAP(() => {
         // First row scroll
         anim1.current = gsap.to(row1Ref.current, {
-            xPercent: -33.3,
+            xPercent: -33.333,
             ease: "none",
             duration: 15,
             repeat: -1,
         });
 
         // Second row scroll
-        gsap.set(row2Ref.current, { xPercent: -33.3 });
+        gsap.set(row2Ref.current, { xPercent: -33.333 });
         anim2.current = gsap.to(row2Ref.current, {
             xPercent: 0,
             ease: "none",
@@ -81,12 +81,13 @@ export default function Skills() {
     };
 
     return (
-        <section id="skills" className="mt-10 md:min-h-screen">
+        <section id="skills" className="pt-50 md:pt-0 md:min-h-screen">
             <h2 className="text-section-heading font-bold max-w-full mx-auto px-8 tracking-tight md:pt-15">{t('skills.title')}</h2>
 
+            <div className="flex justify-center items-center">
             {/* Infinite marquee */}
             <div ref={container} className="
-                flex flex-col gap-10 
+                flex-1 flex flex-col gap-10 
                 w-full  overflow-hidden
                 mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] 
                 [-webkit-mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]
@@ -113,6 +114,7 @@ export default function Skills() {
                         <SkillCard skill={skill} key={`r2-${id}`} />
                     ))}
                 </div>
+            </div>
             </div>
         </section>
     );
