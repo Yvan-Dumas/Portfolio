@@ -51,6 +51,7 @@
         }
     },
     "contact" : {
-        "title" : "Contact me !"
+        "title" : "Contact me !",
+        "resume" : "Download resume"
     }
 }
