@@ -40,7 +40,7 @@ export default function App() {
 		}} ref={lenisRef}>
 			<Navbar />
 			<ScrollDots />
-			<main className='selection:bg-hover md:px-36'>
+			<main className='smooth-lang selection:bg-hover md:px-36'>
 				<Hero />
 				<About />
 				<Skills />
