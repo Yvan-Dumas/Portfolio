@@ -20,12 +20,12 @@ export default function Contact() {
     }, []);
 
     return (
-        <section id="contact" className="pt-50 md:pt-0 md:min-h-screen pb-10 md:pb-20">
+        <section id="contact" className="md:min-h-screen pb-10">
             <h2 className="text-section-heading font-bold max-w-full px-8 tracking-tight md:pt-15 mb-5 md:mb-10">
                 {t('contact.title')}
             </h2>
 
-            <div className="flex flex-col gap-6 px-5 md:px-20 mt-20 items-start">
+            <div className="flex flex-col gap-6 px-10 md:px-20 mt-10 md:mt-20 items-start">
                 {/* mail */}
                 <a href="mailto:yvandumas05@gmail.com" className="text-xl md:text-2xl font-medium transition-all hover:text-secondary-text w-max">
                     yvandumas05@gmail.com

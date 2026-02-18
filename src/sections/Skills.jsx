@@ -81,7 +81,7 @@ export default function Skills() {
     };
 
     return (
-        <section id="skills" className="pt-50 md:pt-0 md:min-h-screen">
+        <section id="skills" className="pb-50 md:pb-0 md:min-h-screen">
             <h2 className="text-section-heading font-bold max-w-full mx-auto px-8 tracking-tight md:pt-15">{t('skills.title')}</h2>
 
             <div className="flex justify-center items-center">

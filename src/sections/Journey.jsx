@@ -20,7 +20,7 @@ export default function Education() {
     ];
 
     return (
-        <section id="journey" className="pt-50 md:pt-50 md:min-h-screen">
+        <section id="journey" className="pb-50 md:pb-50 md:min-h-screen">
             <h2 className="text-section-heading font-bold max-w-full px-8 tracking-tight md:pt-15 mb-5 md:mb-10">{t('journey.title')}</h2>
 
             <div className="relative md:mx-20">
