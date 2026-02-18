@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import Button from "../components/Button";
+import ScrollButton from "../components/ScrollButton";
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -18,7 +18,7 @@ export default function Hero() {
 
       <p className="text-sm md:text-lg pt-5 pb-2 leading-tight">{t('hero.internship')}</p>
 
-      <Button content={t('hero.button')} href={"#contact"}/>
+      <ScrollButton content={t('hero.button')} href={"#contact"}/>
     </section>
   );
 }
