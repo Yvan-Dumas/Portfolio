@@ -87,12 +87,12 @@ export default function Skills() {
 
     // Pause the scroll animation
     const handleMouseEnter = (anim) => {
-        gsap.to(anim.current, { timeScale: 0, duration: 0.5 });
+        gsap.to(anim.current, { timeScale: 0, duration: 1 });
     };
 
     // Resume the scroll animation
     const handleMouseLeave = (anim) => {
-        gsap.to(anim.current, { timeScale: 1, duration: 0.5 });
+        gsap.to(anim.current, { timeScale: 1, duration: 1 });
     };
 
     return (
