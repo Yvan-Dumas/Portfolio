@@ -113,7 +113,7 @@ export default function Education() {
                 </div>
 
                 {/* Education and Experience */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 md:gap-x-25 items-center gap-y-10 md:gap-y-20 lg:gap-y-50 mx-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 md:gap-x-25 items-center gap-y-10 md:gap-y-20 lg:gap-y-50 xl:gap-y-70 mx-12">
                     {journeyData.map((item, index) => (
                         <div key={index} className={`journey-item`}>
                             <JourneyCard
