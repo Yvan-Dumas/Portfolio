@@ -21,7 +21,6 @@ export default function About() {
             scrollTrigger: {
                 trigger: container.current,
                 start: "top 75%",
-                toggleActions: "play none none none"
             }
         });
 
@@ -42,9 +41,9 @@ export default function About() {
 
         // image animation
         gsap.fromTo("img",
-            { rotation: -8 },
+            { rotation: -5 },
             {
-                rotation: 8,
+                rotation: 5,
                 scrollTrigger: {
                     trigger: container.current,
                     start: "top 70%",
