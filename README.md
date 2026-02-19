@@ -1,18 +1,50 @@
-# React + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the repository of my personal portfolio, a modern web application to showcase my journey, projects and skills.
 
-Currently, two official plugins are available:
+Link : 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screenshots
 
-## React Compiler
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Tech Stack
+- Vite
+- React
+- Tailwind CSS
+- GSAP
+- i18next
+- Host : Cloudflare
 
-Note: This will impact Vite dev & build performances.
+## Key Features
+- Bento Grid to display projects
+- Scroll triggered timeline for the journey section
+- Infinite marquee to display skills
+- Responsive design
 
-## Expanding the ESLint configuration
+## Installation
+1. Clone this repo  
+    `git clone https://github.com/Yvan-Dumas/Portfolio`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Install dependencies  
+    `npm install`
+
+3. Run dev server  
+    `npm run dev`
+
+4. Run for production  
+    `npm run build`
+
+## Project Structure
+
+├── src/  
+│   ├── assets/        # Images and font  
+│   ├── components/    # Reusable UI components  
+│   ├── sections/      # Main page sections (Hero, Journey, Contact)  
+│   ├── i18n/          # i18n JSON files (EN/FR)  
+│   ├── App.jsx        # Main application entry point  
+│   └── main.jsx       # Vite setup
+├── public/            # Favicon and downloadable CV  
+└── vite.config.js     # Vite configuration  
+
+## Author
+Yvan Dumas  
