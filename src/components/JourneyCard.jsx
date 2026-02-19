@@ -3,7 +3,7 @@ export default function JourneyCard({ title, date, description, image, isLeft, i
         <div className={`
             ${isLeft ? 'md:col-start-1' : 'md:col-start-2'}
             flex gap-2
-            rounded-2xl p-2 md:px-5
+            rounded-2xl p-2 lg:px-3 xl:px-5
             border-2
             hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:bg-hover
         `}>
