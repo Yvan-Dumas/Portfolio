@@ -48,16 +48,17 @@ export default function Education() {
         // Timeline and dot
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: ".relative.md\\:mx-20",
-                start: "top 80%",
-                end: "bottom 80%",
-                toggleActions: "play none none none",
+                trigger: container.current.querySelector(".relative"),
+                start: "top 70%",
+                end: "bottom 50%",
                 scrub: 1,
             }
         });
         tl.to(".timeline-line", { scaleY: 1, ease: "none" }, 0);
         tl.to(".timeline-dot", {
-            y: container.current.querySelector(".relative").offsetHeight,
+            yPercent: 100,
+            top: "100%",
+            y: -12,
             ease: "none",
         }, 0);
 
@@ -91,7 +92,7 @@ export default function Education() {
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: item,
-                        start: "top 90%",
+                        start: "top 60%",
                     }
                 });
             });
@@ -103,7 +104,7 @@ export default function Education() {
         <section ref={container} id="journey" className="pb-50 md:pb-50 md:min-h-screen">
             <h2 className="text-section-heading font-bold max-w-full px-8 tracking-tight md:pt-15 mb-5 md:mb-10">{t('journey.title')}</h2>
 
-            <div className="relative md:mx-20">
+            <div className="relative ">
                 {/* Timeline */}
                 <div className="absolute mx-5 md:mx-0 md:left-1/2 h-full w-[0.15rem]">
                     {/* line */}
@@ -113,7 +114,7 @@ export default function Education() {
                 </div>
 
                 {/* Education and Experience */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 md:gap-x-25 items-center gap-y-10 md:gap-y-20 lg:gap-y-50 xl:gap-y-70 mx-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 md:gap-x-10 lg:gap-x-20 items-center gap-y-10 md:gap-y-20 lg:gap-y-50 xl:gap-y-70 mx-10">
                     {journeyData.map((item, index) => (
                         <div key={index} className={`journey-item`}>
                             <JourneyCard
