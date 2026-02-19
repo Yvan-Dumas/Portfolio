@@ -16,12 +16,12 @@ export default function Hero() {
 		tl.from(".hero-identity", { // Text (1st part)
 			y: 30,
 			opacity: 0,
-			stagger: 1,
+			stagger: 0.5,
 		})
 			.from(".hero-info", { // Text (2nd part)
 				y: 20,
 				opacity: 0,
-				stagger: 0.2,
+				stagger: 0.1,
 			},)
 			.from(".hero-btn", { // button
 				scale : 0.9,
