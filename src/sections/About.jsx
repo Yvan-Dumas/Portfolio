@@ -68,7 +68,7 @@ export default function About() {
                     <div>
                         <ActionButton
                             content={t('contact.resume')}
-                            href={"/DumasYvan-resume.pdf"}
+                            href={"/resume/YvanDumas-resume.pdf"}
                         />
                     </div>
                 </div>
