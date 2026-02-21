@@ -8,13 +8,15 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function Navbar() {
+    const { t, i18n } = useTranslation();
+
     const navLinks = [
-        { name: 'Home', href: 'home' },
-        { name: 'About', href: "about" },
-        { name: 'Skills', href: "skills" },
-        { name: 'Projects', href: 'projects' },
-        { name: 'Journey', href: 'journey' },
-        { name: 'Contact', href: 'contact' }
+        { name: t('navbar.home'), href: 'home' },
+        { name: t('navbar.about'), href: "about" },
+        { name: t('navbar.skills'), href: "skills" },
+        { name: t('navbar.projects'), href: 'projects' },
+        { name: t('navbar.journey'), href: 'journey' },
+        { name: t('navbar.contact'), href: 'contact' }
     ];
 
     // Smooth scroll with GSAP
@@ -23,8 +25,6 @@ export default function Navbar() {
         gsap.to(window, { duration: 1, scrollTo: { y: `#${id}`, offsetY: 0 }, ease: "power3.inOut" });
     };
 
-
-    const { i18n } = useTranslation();
 
     // Change language
     const toggleLanguage = () => {
@@ -69,7 +69,7 @@ export default function Navbar() {
             <div className="pointer-events-auto">
                 <ActionButton
                     handleClick={() => toggleLanguage()}
-                    content={`Language : ${i18n.language === 'fr' ? 'FR (WIP)' : 'EN'}`} />
+                    content={`${t('navbar.language')} : ${i18n.language === 'fr' ? 'FR' : 'EN'}`} />
             </div>
         </nav>
     );
