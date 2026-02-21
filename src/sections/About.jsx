@@ -60,8 +60,16 @@ export default function About() {
                 <div className="about-content flex flex-col gap-5 items-start">
                     <p className="mt-10 md:mt-15 whitespace-pre-line">
                         <Trans
+                            t = {t}
                             i18nKey="about.description"
-                            components={{ b: <strong className="font-bold" /> }}
+                            components={{
+                                b: <strong className="font-bold" />,
+                                l: <a href="https://www.instagram.com/venty_3d/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="underline underline-offset-4 decoration-1 hover:decoration-2 transition-all duration-300 font-bold"
+                                />
+                            }}
                         />
                     </p>
                     {/* Resume */}
@@ -72,7 +80,9 @@ export default function About() {
                         />
                     </div>
                 </div>
-                <img src={chopperImg} alt="3D modeling of Tony Tony Chopper from One Piece" className="flex-none w-[18vw] min-w-37.5 max-w-125 object-contain aspect-auto drop-shadow-2xl" />
+                <a href="https://www.instagram.com/venty_3d/" target="_blank" rel="noopener noreferrer">
+                    <img src={chopperImg} alt="3D modeling of Tony Tony Chopper from One Piece" className="flex-none w-[18vw] min-w-37.5 max-w-125 object-contain aspect-auto drop-shadow-2xl" />
+                </a>
             </div>
         </section>
     );
