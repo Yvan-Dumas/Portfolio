@@ -1,14 +1,66 @@
 {
+    "navbar" : {
+        "home" : "Accueil",
+        "about" : "À propos",
+        "skills" : "Compétences",
+        "projects" : "Projets",
+        "journey" : "Parcours",
+        "contact" : "Contact",
+        "language" : "Langue"
+    },
     "hero" : {
         "greetings" : "Bonjour ", 
-        "name" : "I'm Yvan Dumas",
-        "state" : "Engineering student in Computer Science at Polytech Lyon.",
-        "location" : "Based in Lyon, France",
-        "internship" : "Looking for a 5-month internship abroad, starting in September 2026.",
-        "button" : "Contact me !"
+        "name" : "Je suis Yvan Dumas",
+        "state" : "Étudiant ingénieur en Informatique à Polytech Lyon.",
+        "location" : "Basé à Lyon, France",
+        "internship" : "À la recherche d'un stage de 5 mois à l'étranger pour septembre 2026.",
+        "button" : "Contactez-moi !"
     },
     "about" : {
-        "title" : "About",
-        "description" : "azd"
+        "title" : "À propos",
+        "description" : "Étudiant en école d'ingénieur à <b>Polytech Lyon</b> en spécialité <b>Informatique</b>, je suis passionné par les nouvelles technologies et le développement. Je fais aussi de la <l>modélisation 3D</l>.\n\n Au-delà du code, j'adore le sport. Je suis <b>ceinture noire de karaté</b> et pratique le <b>volley-ball</b>. Ces sports m'ont appris la <b>discipline</b> et l'<b>esprit d'équipe</b>, des valeurs que j'applique dans chacun de mes projets techniques. Je suis aussi un grand fan de Formule 1, où je suis fasciné par <b>l'innovation constante</b> des ingénieurs dans ce sport.\n\nJe recherche actuellement un <b>stage de 5 mois</b> à l'étranger pour <b>septembre 2026</b> afin de développer mes compétences au sein d'une équipe internationale."
+    },
+    "skills" : {
+        "title" : "Compétences"
+    },
+    "projects" : {
+        "title" : "Projets"
+    },
+    "journey" : {
+        "title" : "Formation & Expériences",
+        "carrefour" : {
+            "title" : "Carrefour - Employé Commercial",
+            "date" : "Juillet 2025 - Août 2025",
+            "description" : "Gestion de la réception des marchandises et rotation FIFO pour la mise en rayon de produits frais/surgelés.\nSuivi des dates d'expiration et respect strict des règles de sécurité et de la chaîne du froid."
+        },
+        "polytech" : {
+            "title" : "Polytech Lyon - École d'Ingénieurs",
+            "date" : "2025 - 2028",
+            "description" : "Diplôme d'ingénieur en Informatique."
+        },
+        "cntb" : {
+            "title" : "Centre Nautique Tony Bertrand - Agent d'Entretien et de Maintenance",
+            "date" : "Juin 2024 - Septembre 2024",
+            "description" : "Entretien des installations et hygiène pour la satisfaction des usagers.\nAccueil et orientation des usages dans un établissement public à forte affluence."
+        },
+        "peip" : {
+            "title" : "Polytech Lyon - Cycle Préparatoire Intégré",
+            "date" : "2023 - 2025",
+            "description" : "Parcours des Écoles d'Ingénieurs Polytech (PeiP), classe Mathématiques et Informatique."
+        },
+        "iris" : {
+            "title" : "Clinique Iris - Stagiaire d'observation Informatique et Santé",
+            "date" : "Décembre 2019",
+            "description" : "Observation de la gestion du Dossier Patient Informatisé (DPI) en milieu hospitalier.\nAccompagnement du responsable informatique pour comprendre les enjeux de sécurité des données dans le milieu de la santé."
+        },
+        "lycee" :  {
+            "title" : "Lycée Charlie Chaplin",
+            "date" : "2020 - 2023",
+            "description" : "Baccalauréat général, spécialités Mathématiques et Sciences de l'Ingénieur, mention Bien."
+        }
+    },
+    "contact" : {
+        "title" : "Contactez-moi !",
+        "resume" : "Télécharger mon CV"
     }
 }

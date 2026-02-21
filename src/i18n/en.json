@@ -1,4 +1,13 @@
 {
+    "navbar" : {
+        "home" : "Home",
+        "about" : "About",
+        "skills" : "Skills",
+        "projects" : "Projects",
+        "journey" : "Journey",
+        "contact" : "Contact",
+        "language" : "Language"
+    },
     "hero" : {
         "greetings" : "Hi ", 
         "name" : "I'm Yvan Dumas",
@@ -9,7 +18,7 @@
     },
     "about" : {
         "title" : "About",
-        "description" : "I am a <b>Computer Science</b> engineering student at <b>Polytech Lyon</b>, passionate about new technologies and IT. I also enjoy <b>3D modeling</b>.\n\n Beyond coding, I love sport. I am a <b>black belt in karate</b> and a volleyball player. These sports have taught me the <b>discipline</b> and <b>team spirit</b> that I bring to my technical projects. I am also a huge fan of Formula 1.\n\nI am currently seeking a <b>5-month internship</b> abroad starting in <b>September 2026</b> to develop my skills within an international team."
+        "description" : "I am a <b>Computer Science</b> engineering student at <b>Polytech Lyon</b>, passionate about <b>new technologies and IT</b>. I also enjoy <l>3D modeling</l>.\n\n Beyond coding, I love sport. I am a <b>black belt in karate</b> and a <b>volleyball player</b>. These sports have taught me <b>discipline</b> and <b>team spirit</b> that I bring to my technical projects. I am also a huge fan of <b>Formula 1</b>, fascinated by the seamless integration of <b>cutting-edge engineering</b> in this sport.\n\nI am currently seeking a <b>5-month internship</b> abroad starting in <b>September 2026</b> to develop my skills within an international team."
     },
     "skills" : {
         "title" : "Skills"
@@ -27,7 +36,7 @@
         "polytech" : {
             "title" : "Polytech Lyon - Engineering School",
             "date" : "2025 - 2028",
-            "description" : "Engineer's degree in Computer Science"
+            "description" : "Engineer's degree in Computer Science."
         },
         "cntb" : {
             "title" : "Centre Nautique Tony Bertrand - Facility and Maintenance Assistant",
@@ -37,7 +46,7 @@
         "peip" : {
             "title" : "Polytech Lyon - Integrated Preparatory Cycle",
             "date" : "2023 - 2025",
-            "description" : "Polytech Engineering Schools Program (PeiP), Mathematics and Computer Science"
+            "description" : "Polytech Engineering Schools Program (PeiP), integrated preparatory class focused on Mathematics and Computer Science."
         },
         "iris" : {
             "title" : "Iris Clinic - IT and Healthcare Observation Intern",
@@ -52,6 +61,6 @@
     },
     "contact" : {
         "title" : "Contact me !",
-        "resume" : "Download resume"
+        "resume" : "Download my resume"
     }
 }
