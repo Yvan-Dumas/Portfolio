@@ -17,7 +17,7 @@ import Projects from './sections/Projects';
 import Education from './sections/Journey';
 import Contact from './sections/Contact';
 
-gsap.registerPlugin(ScrollTrigger, useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
 	const lenisRef = useRef();
@@ -35,10 +35,10 @@ export default function App() {
 	return (
 		<>
 			<AnimatedCursor
-				innerSize={8}
-                outerSize={35}
+				innerSize={10}
+                outerSize={40}
                 innerScale={0.8}
-                outerScale={1.5}
+                outerScale={2}
                 outerAlpha={0}
 				trailingSpeed={8}
                 hasBlendMode={true}
