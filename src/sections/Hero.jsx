@@ -33,7 +33,6 @@ export default function Hero() {
 		<section ref={container} id="home" className="flex flex-col items-center justify-center text-center px-4 md:min-h-screen pb-50 md:pb-0 pt-50 md:pt-0">
 			<div className="hero-identity flex items-center text-[clamp(2.5rem,7vw,3rem)] font-bold mb-2 leading-5">
 				<span>{t('hero.greetings')}</span>
-				<span className="animate-wave origin-bottom-right relative -top-0.5">👋</span>
 			</div>
 
 			<h2 className="hero-identity text-[clamp(1.5rem,7vw,2.5rem)] font-bold">{t('hero.name')}</h2>
