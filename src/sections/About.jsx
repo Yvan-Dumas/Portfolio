@@ -48,7 +48,7 @@ export default function About() {
                     trigger: container.current,
                     start: "top 70%",
                     end: "bottom top",
-                    scrub: 0.5,
+                    scrub: 1,
                 }
             });
     }, { scope: container })
