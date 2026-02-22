@@ -20,7 +20,7 @@ export default function ScrollDots() {
             duration: 0.8,
             stagger: 0.1,
             ease: "back.out(1.7)",
-        })
+        }, "-=1.6")
 
         const dots = gsap.utils.toArray(".dot-trigger", container.current);
 
