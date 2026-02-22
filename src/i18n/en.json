@@ -9,16 +9,16 @@
         "language" : "Language"
     },
     "hero" : {
-        "greetings" : "Hi ", 
+        "greetings" : "Welcome", 
         "name" : "I'm Yvan Dumas",
         "state" : "Engineering student in Computer Science at Polytech Lyon.",
         "location" : "Based in Lyon, France",
-        "internship" : "Looking for a 5-month internship abroad, starting in September 2026.",
+        "internship" : "Looking for a 5-month internship in Japan, starting in September 2026.",
         "button" : "Contact me !"
     },
     "about" : {
         "title" : "About",
-        "description" : "I am a <b>Computer Science</b> engineering student at <b>Polytech Lyon</b>, passionate about <b>new technologies and IT</b>. I also enjoy <l>3D modeling</l>.\n\n Beyond coding, I love sport. I am a <b>black belt in karate</b> and a <b>volleyball player</b>. These sports have taught me <b>discipline</b> and <b>team spirit</b> that I bring to my technical projects. I am also a huge fan of <b>Formula 1</b>, fascinated by the seamless integration of <b>cutting-edge engineering</b> in this sport.\n\nI am currently seeking a <b>5-month internship</b> abroad starting in <b>September 2026</b> to develop my skills within an international team."
+        "description" : "I am a <b>Master's student</b> in <b>Computer Science</b> at <b>Polytech Lyon</b> Engineering School, passionate about <b>new technologies and IT</b>. I also enjoy <l>3D modeling</l>.\n\n Beyond coding, I love sport. I am a <b>black belt in karate</b> and a <b>volleyball player</b>. These sports have taught me <b>discipline</b> and <b>team spirit</b> that I bring to my technical projects. I am also a huge fan of <b>Formula 1</b>, fascinated by the seamless integration of <b>cutting-edge engineering</b> in this sport.\n\nI am currently seeking a <b>5-month internship</b> abroad starting in <b>September 2026</b> to develop my skills within an international team."
     },
     "skills" : {
         "title" : "Skills"

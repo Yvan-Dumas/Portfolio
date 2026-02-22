@@ -10,7 +10,7 @@
     },
     "hero" : {
         "greetings" : "Bonjour ", 
-        "name" : "Je suis Yvan Dumas",
+        "name" : "Yvan Dumas",
         "state" : "Étudiant ingénieur en Informatique à Polytech Lyon.",
         "location" : "Basé à Lyon, France",
         "internship" : "À la recherche d'un stage de 5 mois à l'étranger pour septembre 2026.",
