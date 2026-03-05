@@ -41,9 +41,12 @@ export default function About() {
 
         // image animation
         gsap.fromTo("img",
-            { rotation: -5 },
+            { rotation: -5,
+                y:50
+             },
             {
                 rotation: 5,
+                y:-50,
                 scrollTrigger: {
                     trigger: container.current,
                     start: "top 70%",
@@ -80,7 +83,7 @@ export default function About() {
                         />
                     </div>
                 </div>
-                <a href="https://www.instagram.com/venty_3d/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/venty_3d/" target="_blank" rel="noopener noreferrer" className="hidden md:flex">
                     <img src={chopperImg} alt="3D modeling of Tony Tony Chopper from One Piece" className="flex-none w-[18vw] min-w-37.5 max-w-125 object-contain aspect-auto drop-shadow-2xl" />
                 </a>
             </div>
