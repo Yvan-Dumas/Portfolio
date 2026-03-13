@@ -24,7 +24,13 @@
         "title" : "Skills"
     },
     "projects" : {
-        "title" : "Projects"
+        "title" : "Projects",
+        "tic-tac-toe" : "Tic-Tac-Toe game built with React",
+        "movizitor" : "Movie recommendation website built with Django",
+        "jetpack-escape" : "2D endless runner game",
+        "calculator" : "Fully functional Javascript calculator",
+        "instagram" : "3D modeling instagram account",
+        "blog" : "Blog website with role-based access control system" 
     },
     "journey" : {
         "title" : "Education & Experience",

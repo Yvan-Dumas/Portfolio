@@ -18,14 +18,7 @@ import calculatorImg from "../assets/images/projects/calculator.png";
 const square = "row-span-2 md:col-span-1 md:row-span-1"
 const large = "row-span-2 col-span-1 md:col-span-2 md:row-span-1";
 
-const projects = [
-    { title: "Tic-Tac-Toe with react", image: ticTacToeImg, size: square, link: "https://github.com/Yvan-Dumas/React-TicTacToe", description: "Tic-Tac-Toe game built with react" },
-    { title: "Movizitor", image: movizitorImg, size: large, link: "https://github.com/Yvan-Dumas/movizitor/", description: "Movie recommendation website built with Django" },
-    { title: "Jetpack Escape", image: jetpackEscapeImg, size: large, link: "https://github.com/Yvan-Dumas/Jetpack-Escape", description: "2D endless runner game" },
-    { title: "Calculator", image: calculatorImg, size: square, link: "https://github.com/Yvan-Dumas/Odin-Calculator", description: "Fully functional Javascript calculator" },
-    { title: "Gameboy", image: gameboyImg, size: square, link: "https://www.instagram.com/venty_3d/", description: "3D modeling instagram account"  },
-    { title: "Blog", image: blogImg, size: large, link: "https://github.com/Yvan-Dumas/Blog-projet-isi1", description: "Blog website with role-based access control system" },
-]
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +26,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
     const { t } = useTranslation();
+
+    const projects = [
+        { title: "Tic-Tac-Toe with react", image: ticTacToeImg, size: square, link: "https://github.com/Yvan-Dumas/React-TicTacToe", description: t('projects.tic-tac-toe') },
+        { title: "Movizitor", image: movizitorImg, size: large, link: "https://github.com/Yvan-Dumas/movizitor/", description: t('projects.movizitor') },
+        { title: "Jetpack Escape", image: jetpackEscapeImg, size: large, link: "https://github.com/Yvan-Dumas/Jetpack-Escape", description: t('projects.jetpack-escape') },
+        { title: "Calculator", image: calculatorImg, size: square, link: "https://github.com/Yvan-Dumas/Odin-Calculator", description: t('projects.calculator') },
+        { title: "Gameboy", image: gameboyImg, size: square, link: "https://www.instagram.com/venty_3d/", description: t('projects.instagram') },
+        { title: "Blog", image: blogImg, size: large, link: "https://github.com/Yvan-Dumas/Blog-projet-isi1", description: t('projects.blog') },
+    ]
 
     const container = useRef();
 
