@@ -19,12 +19,12 @@ const square = "row-span-2 md:col-span-1 md:row-span-1"
 const large = "row-span-2 col-span-1 md:col-span-2 md:row-span-1";
 
 const projects = [
-    { title: "Tic-Tac-Toe with react", image: ticTacToeImg, size: square, link: "https://github.com/Yvan-Dumas/React-TicTacToe" },
-    { title: "Movizitor", image: movizitorImg, size: large, link: "https://github.com/Yvan-Dumas/movizitor/" },
-    { title: "Jetpack Escape", image: jetpackEscapeImg, size: large, link: "https://github.com/Yvan-Dumas/Jetpack-Escape" },
-    { title: "Calculator", image: calculatorImg, size: square, link: "https://github.com/Yvan-Dumas/Odin-Calculator" },
-    { title: "Gameboy", image: gameboyImg, size: square, link: "https://www.instagram.com/venty_3d/" },
-    { title: "Blog", image: blogImg, size: large, link: "https://github.com/Yvan-Dumas/Blog-projet-isi1" },
+    { title: "Tic-Tac-Toe with react", image: ticTacToeImg, size: square, link: "https://github.com/Yvan-Dumas/React-TicTacToe", description: "Tic-Tac-Toe game built with react" },
+    { title: "Movizitor", image: movizitorImg, size: large, link: "https://github.com/Yvan-Dumas/movizitor/", description: "Movie recommendation website built with Django" },
+    { title: "Jetpack Escape", image: jetpackEscapeImg, size: large, link: "https://github.com/Yvan-Dumas/Jetpack-Escape", description: "2D endless runner game" },
+    { title: "Calculator", image: calculatorImg, size: square, link: "https://github.com/Yvan-Dumas/Odin-Calculator", description: "Fully functional Javascript calculator" },
+    { title: "Gameboy", image: gameboyImg, size: square, link: "https://www.instagram.com/venty_3d/", description: "3D modeling instagram account"  },
+    { title: "Blog", image: blogImg, size: large, link: "https://github.com/Yvan-Dumas/Blog-projet-isi1", description: "Blog website with role-based access control system" },
 ]
 
 gsap.registerPlugin(ScrollTrigger);
@@ -75,7 +75,7 @@ export default function Projects() {
 
             {/* bento grid */}
             <div className="
-                bento-grid grid grid-cols-1 md:grid-cols-3 gap-4
+                bento-grid grid grid-cols-1 md:grid-cols-3 gap-5
                 px-5 md:px-20
                 auto-rows-[30vw] md:auto-rows-[20vw]
             ">
@@ -85,6 +85,7 @@ export default function Projects() {
                             title={project.title}
                             image={project.image}
                             link={project.link}
+                            description={project.description}
                         />
                     </div>
                 ))
