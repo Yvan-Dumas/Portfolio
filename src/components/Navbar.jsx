@@ -89,9 +89,9 @@ export default function Navbar() {
             {/* left part: navigation */}
             <div className="flex flex-col items-start leading-tight pointer-events-auto">
                 <h1 className="font-bold text-base tracking-tight">Yvan Dumas</h1>
-                <span className="navbar-portfolio-text text-sm ml-4">/ Portfolio</span>
+                <span className="navbar-portfolio-text text-sm ml-2 lg:ml-4">/ Portfolio</span>
 
-                <ul className="navbar-content flex flex-col ml-8">
+                <ul className="navbar-content flex flex-col ml-4 lg:ml-8">
                     {navLinks.map((link) => (
                         <li key={link.name}>
                             <a onClick={(e) => handleClick(e, link.href)} href={`#${link.href}`} className="font-extralight hover:underline transition-all text-sm">

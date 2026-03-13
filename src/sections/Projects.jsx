@@ -78,7 +78,7 @@ export default function Projects() {
             {/* bento grid */}
             <div className="
                 bento-grid grid grid-cols-1 md:grid-cols-3 gap-5
-                px-5 md:px-20
+                px-5 md:px-10 lg:px-20
                 auto-rows-[30vw] md:auto-rows-[20vw]
             ">
                 {projects.map((project, id) => (
