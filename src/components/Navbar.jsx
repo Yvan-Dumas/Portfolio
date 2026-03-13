@@ -4,13 +4,14 @@ import ActionButton from "./ActionButton";
 
 import { useTranslation } from "react-i18next";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function Navbar() {
     const { t, i18n } = useTranslation();
     const container = useRef();
+    const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [
         { name: t('navbar.home'), href: 'home' },
@@ -34,9 +35,9 @@ export default function Navbar() {
         })
             // button
             .from(".navbar-btn", {
-				scale : 0.9,
-				opacity: 0,
-			})
+                scale: 0.9,
+                opacity: 0,
+            })
             // text under name
             .from(".navbar-portfolio-text", {
                 x: -50,
@@ -70,10 +71,7 @@ export default function Navbar() {
             opacity: 0,
             duration: 0.4,
             onComplete: () => {
-                // 2. On change la langue quand c'est invisible
                 i18n.changeLanguage(newLanguage);
-
-                // 3. On fait réapparaître le contenu avec le nouveau texte
                 gsap.to(".smooth-lang", {
                     opacity: 1,
                     duration: 0.4,
@@ -84,17 +82,33 @@ export default function Navbar() {
     }
 
     return (
-        <nav ref={container} className="smooth-lang md:fixed top-0 z-50 w-full flex justify-between items-start max-w-full mx-auto px-6 py-6 pointer-events-none selection:bg-hover">
+        <nav ref={container} className="smooth-lang fixed top-0 z-50 w-full flex justify-between items-start px-6 py-6 pointer-events-none">
 
-            {/* left part: navigation */}
+            {/* Left part */}
             <div className="flex flex-col items-start leading-tight pointer-events-auto">
-                <h1 className="font-bold text-base tracking-tight">Yvan Dumas</h1>
-                <span className="navbar-portfolio-text text-sm ml-2 lg:ml-4">/ Portfolio</span>
+                <h1 className="hidden md:block font-bold text-base tracking-tight">Yvan Dumas</h1>
+                <span className="hidden md:block navbar-portfolio-text text-sm ml-2 lg:ml-4">/ Portfolio</span>
 
-                <ul className="navbar-content flex flex-col ml-4 lg:ml-8">
+                {/* Mobile menu button */}
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="md:hidden text-base mt-1 opacity-70 hover:opacity-100 transition-opacity"
+                >
+                    {isOpen ? "[ menu ]" : "[ menu ]"}
+                </button>
+
+                {/* links list */}
+                <ul className={`
+                    navbar-content flex flex-col ml-4 lg:ml-8 transition-all duration-300
+                    ${isOpen ? "opacity-100 h-auto mt-1" : "opacity-0 h-0 overflow-hidden md:opacity-100 md:h-auto md:mt-0"}
+                `}>
                     {navLinks.map((link) => (
-                        <li key={link.name}>
-                            <a onClick={(e) => handleClick(e, link.href)} href={`#${link.href}`} className="font-extralight hover:underline transition-all text-sm">
+                        <li key={link.name} className="py-1 md:py-0">
+                            <a
+                                onClick={(e) => { handleClick(e, link.href); setIsOpen(false); }}
+                                href={`#${link.href}`}
+                                className="font-extralight hover:underline text-sm"
+                            >
                                 / {link.name}
                             </a>
                         </li>
@@ -102,11 +116,12 @@ export default function Navbar() {
                 </ul>
             </div>
 
-            {/* right part: language btn */}
+            {/* Right part : language button */}
             <div className="navbar-btn pointer-events-auto">
                 <ActionButton
                     handleClick={() => toggleLanguage()}
-                    content={`${t('navbar.language')} : ${i18n.language === 'fr' ? 'FR' : 'EN'}`} />
+                    content={i18n.language.toUpperCase()}
+                />
             </div>
         </nav>
     );
