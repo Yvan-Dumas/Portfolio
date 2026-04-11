@@ -29,7 +29,7 @@
         "movizitor" : "Movie recommendation website built with Django",
         "jetpack-escape" : "2D endless runner game",
         "calculator" : "Fully functional Javascript calculator",
-        "instagram" : "3D modeling instagram account",
+        "minesweeper" : "Minesweeper game in Java",
         "blog" : "Blog website with role-based access control system" 
     },
     "journey" : {

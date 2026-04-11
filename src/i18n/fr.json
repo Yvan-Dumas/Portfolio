@@ -29,7 +29,7 @@
         "movizitor" : "Application web de recommandation de films conçue avec Django",
         "jetpack-escape" : "Jeu d'arcade endless runner en 2D",
         "calculator" : "Calculatrice fonctionnelle en Javascript",
-        "instagram" : "Compte Instagram dédié à la modélisation 3D",
+        "minesweeper" : "Jeu du démineur en Java",
         "blog" : "Blog avec système de gestion des rôles et accès" 
     },
     "journey" : {

@@ -10,7 +10,7 @@ import BentoItem from "../components/BentoItem";
 import ticTacToeImg from "../assets/images/projects/ticTacToe.png";
 import movizitorImg from "../assets/images/projects/movizitor.png";
 import jetpackEscapeImg from "../assets/images/projects/jetpackEscape.png";
-import gameboyImg from "../assets/images/projects/gameboy.png";
+import minesweeperImg from "../assets/images/projects/minesweeper.png";
 import blogImg from "../assets/images/projects/blog.png";
 import calculatorImg from "../assets/images/projects/calculator.png";
 
@@ -32,7 +32,7 @@ export default function Projects() {
         { title: "Movizitor", image: movizitorImg, size: large, link: "https://github.com/Yvan-Dumas/movizitor/", description: t('projects.movizitor') },
         { title: "Jetpack Escape", image: jetpackEscapeImg, size: large, link: "https://github.com/Yvan-Dumas/Jetpack-Escape", description: t('projects.jetpack-escape') },
         { title: "Calculator", image: calculatorImg, size: square, link: "https://github.com/Yvan-Dumas/Odin-Calculator", description: t('projects.calculator') },
-        { title: "Gameboy", image: gameboyImg, size: square, link: "https://www.instagram.com/venty_3d/", description: t('projects.instagram') },
+        { title: "Minesweeper", image: minesweeperImg, size: square, link: "https://github.com/Yvan-Dumas/Minesweeper-Game/tree/main", description: t('projects.minesweeper') },
         { title: "Blog", image: blogImg, size: large, link: "https://github.com/Yvan-Dumas/Blog-projet-isi1", description: t('projects.blog') },
     ]
 
